@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>FlashFinance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Light Mode Defaults */
+        --app-bg: #f1f5f9;      /* slate-100 */
+        --app-card: #ffffff;    /* white */
+        --app-text: #0f172a;    /* slate-900 */
+        --app-text-muted: #64748b; /* slate-500 */
+        --app-border: #e2e8f0;  /* slate-200 */
+        --app-input: #f8fafc;   /* slate-50 */
+      }
+      .dark {
+        /* Dark Mode Overrides */
+        --app-bg: #0f172a;      /* slate-900 */
+        --app-card: #1e293b;    /* slate-800 */
+        --app-text: #f8fafc;    /* slate-50 */
+        --app-text-muted: #94a3b8; /* slate-400 */
+        --app-border: #334155;  /* slate-700 */
+        --app-input: #020617;   /* slate-950 */
+      }
+
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: var(--app-bg); }
+      ::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+      
+      body { 
+        background-color: var(--app-bg); 
+        color: var(--app-text); 
+        -webkit-tap-highlight-color: transparent; 
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Theme Palette
+              primary: {
+                DEFAULT: '#A000FF', 
+                light: '#FFAB0F',   
+              },
+              secondary: '#0FFF80', 
+              success: '#43AA73',   
+              warning: '#806C47',   
+              accent: '#6B4780',    
+              
+              // Semantic Application Colors
+              app: {
+                bg: 'var(--app-bg)',
+                card: 'var(--app-card)',
+                text: 'var(--app-text)',
+                'text-muted': 'var(--app-text-muted)',
+                border: 'var(--app-border)',
+                input: 'var(--app-input)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "sweetalert2": "https://aistudiocdn.com/sweetalert2@^11.26.3",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.9",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "dexie": "https://aistudiocdn.com/dexie@^4.2.1",
+    "zustand/": "https://aistudiocdn.com/zustand@^5.0.9/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
